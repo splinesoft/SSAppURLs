@@ -64,7 +64,7 @@ static inline NSString * NSStringFromAppURLType(SSAppURLType type) {
     NSIndexSet *availableAppIndexes = [appTypes indexesOfObjectsPassingTest:^BOOL(NSNumber *object,
                                                                                   NSUInteger index,
                                                                                   BOOL *stop) {
-        return [[UIApplication sharedApplication] canOpenApp:(SSAppURLType)[object
+        return [[UIApplication sharedApplication] canOpenAppType:(SSAppURLType)[object
                                                                             unsignedIntegerValue]];
     }];
 	
@@ -85,14 +85,14 @@ static inline NSString * NSStringFromAppURLType(SSAppURLType type) {
     self.tableView.dataSource = dataSource;
 }
 
-#pragma amrk - UITableViewDelegate
+#pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {    
     SSAppURLType type = (SSAppURLType)[[dataSource itemAtIndexPath:indexPath]
                                        unsignedIntegerValue];
     
-    [[UIApplication sharedApplication] openApp:type
-                                     withValue:@"415-555-1212"];
+    [[UIApplication sharedApplication] openAppType:type
+                                         withValue:@"415-555-1212"];
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

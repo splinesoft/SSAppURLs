@@ -27,20 +27,23 @@ Check out `Example` for an app example.
 #import <UIApplication+SSAppURLs.h>
 
 // Does the current device have skype installed?
-BOOL deviceSupportsSkype = [[UIApplication sharedApplication] canOpenApp:SSAppURLTypeSkype];
+BOOL deviceSupportsSkype = [[UIApplication sharedApplication] canOpenAppType:SSAppURLTypeSkype];
 
 // If so, let's make a call!
 if( deviceSupportsSkype )
-  [[UIApplication sharedApplication] openApp:SSAppURLTypeSkype 
-                                   withValue:@"415-555-1212"];
+  [[UIApplication sharedApplication] openAppType:SSAppURLTypeSkype 
+                                       withValue:@"415-555-1212"];
   
 // Does the current device have Chrome installed?
-BOOL deviceHasChrome = [[UIApplication sharedApplication] canOpenApp:SSAppURLTypeChromeHTTP];
+BOOL deviceHasChrome = [[UIApplication sharedApplication] canOpenAppType:SSAppURLTypeChromeHTTP];
 
 // If so, open a website in chrome!
 if( deviceHasChrome )
-	[[UIApplication sharedApplication] openApp:SSAppURLTypeChromeHTTP 
-	                                 withValue:@"http://www.splinesoft.net"];
+	[[UIApplication sharedApplication] openAppType:SSAppURLTypeChromeHTTP 
+	                                     withValue:@"http://www.splinesoft.net"];
+	                                     
+// Check for an arbitrary scheme type
+BOOL deviceHasTelnetApp = [[UIApplication sharedApplication] canOpenAppWithScheme:@"telnet"];
 ```
 
 # Thanks!

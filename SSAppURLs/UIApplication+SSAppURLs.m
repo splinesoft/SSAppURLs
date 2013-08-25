@@ -62,34 +62,40 @@ static inline NSString * SSURLFormatForAppType(SSAppURLType appType) {
     return nil;
 }
 
-@interface UIApplication (SSAppURLs_Internal)
-+ (NSURL *) URLWithType:(SSAppURLType)type input:(NSString *)input;
-@end
+static inline NSString * SSSanitizedURL(NSString *input) {
+  if( [input length] == 0 )
+      return @"";
+    
+    NSRange schemeRange = [input rangeOfString:@"://"];
+    
+    if( schemeRange.location != NSNotFound ) {
+        NSArray *bits = [input componentsSeparatedByString:@"://"];
+        return [bits lastObject];
+    }
+    
+    return input;
+};
 
-@implementation UIApplication (SSAppURLs)
+static inline NSURL * NSURLWithSchemeAndValue(NSString *scheme, NSString *value) {    
+    return [NSURL URLWithString:[NSString stringWithFormat:@"%@://%@",
+                                 scheme,
+                                 value]];
+}
 
-+ (NSURL *)URLWithType:(SSAppURLType)type input:(NSString *)input {
+static inline NSURL * NSURLWithAppTypeAndValue(SSAppURLType type, NSString *value) {
     NSString *format = SSURLFormatForAppType(type);
     
     if( !format )
         return nil;
     
-    // strip scheme prefix
-    NSRange schemeRange = [input rangeOfString:@"://"];
-    NSString *fullURL = nil;
-    
-    if( schemeRange.location != NSNotFound ) {
-        NSArray *bits = [input componentsSeparatedByString:@"://"];
-        fullURL = bits[1];
-    } else
-        fullURL = input;
-    
-    return [NSURL URLWithString:[NSString stringWithFormat:format, fullURL]];
-}
+    return [NSURL URLWithString:[NSString stringWithFormat:format,
+                                 SSSanitizedURL(value)]];
+};
 
-- (BOOL)canOpenApp:(SSAppURLType)appType {
-    NSURL *targetURL = [[self class] URLWithType:appType
-                                           input:@"415-555-1212"];
+@implementation UIApplication (SSAppURLs)
+
+- (BOOL) canOpenAppType:(SSAppURLType)appType {
+    NSURL *targetURL = NSURLWithAppTypeAndValue(appType, @"415-555-1212");
     
     if( !targetURL )
         return NO;
@@ -97,9 +103,12 @@ static inline NSString * SSURLFormatForAppType(SSAppURLType appType) {
     return [self canOpenURL:targetURL];
 }
 
-- (BOOL)openApp:(SSAppURLType)appType withValue:(NSString *)value {
-    NSURL *targetURL = [[self class] URLWithType:appType
-                                           input:value];
+- (BOOL)canOpenAppWithScheme:(NSString *)scheme {    
+    return [self canOpenURL:NSURLWithSchemeAndValue(SSSanitizedURL(scheme), @"testValue")];
+}
+
+- (BOOL) openAppType:(SSAppURLType)appType withValue:(NSString *)value {
+    NSURL *targetURL = NSURLWithAppTypeAndValue(appType, value);
     
     if( !targetURL )
         return NO;
