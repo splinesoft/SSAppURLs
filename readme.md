@@ -44,6 +44,10 @@ if( deviceHasChrome )
 	                                     
 // Check for an arbitrary scheme type
 BOOL deviceHasTelnetApp = [[UIApplication sharedApplication] canOpenAppWithScheme:@"telnet"];
+
+// Let's play NANVAENT!
+if( deviceHasTelnetApp )
+	[[UIApplication sharedApplication] openAppWithScheme:@"telnet" withValue:@"nanvaent.org:23"];
 ```
 
 # Thanks!

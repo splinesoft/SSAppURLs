@@ -47,7 +47,7 @@ typedef NS_ENUM( NSUInteger, SSAppURLType ) {
     SSAppURLTypeOperaHTTPS,
 };
 
-/*
+/**
  * Determines if the current device is capable of opening a URL in a given app.
  * This works for device capabilities (e.g. Facetime) as well as other installed apps (e.g. Skype)
  */
@@ -59,11 +59,22 @@ typedef NS_ENUM( NSUInteger, SSAppURLType ) {
  */
 - (BOOL) canOpenAppWithScheme:(NSString *)scheme;
 
-/*
+/**
  * Constructs a URL and opens it in another app.
  * See `canOpenAppType:` above.
  * Return YES if an application was successfully opened.
  */
-- (BOOL) openAppType:(SSAppURLType)appType withValue:(NSString *)value;
+- (BOOL) openAppType:(SSAppURLType)appType
+           withValue:(NSString *)value;
+
+/**
+ * Constructs a URL with an arbitrary scheme and attempts to open it.
+ * It would be a good idea to check first if the device can open this URL
+ * with `canOpenAppWithScheme:`.
+ * Sample scheme: telnet
+ * Sample value: nanvaent.org:23
+ */
+- (BOOL) openAppWithScheme:(NSString *)scheme
+                 withValue:(NSString *)value;
 
 @end
