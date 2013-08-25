@@ -15,7 +15,7 @@ There are [many public lists](http://www.wiki.akosma.com/IPhone_URL_Schemes) of 
 Install with [Cocoapods](http://cocoapods.org/). Add to your Podfile:
 
 ```
-pod 'SSAppURLs', :git => 'https://github.com/splinesoft/SSAppURLs'
+pod 'SSAppURLs', :git => 'https://github.com/splinesoft/SSAppURLs.git'
 ```
 
 
