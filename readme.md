@@ -2,11 +2,11 @@
 
 Quickly check for and open URLs using iOS app URL schemes.
 
-There are [many public lists](http://www.wiki.akosma.com/IPhone_URL_Schemes) of iOS URL schemes. `SSAppURLs` is a tiny library that makes it easy to:
+There are [many public lists](http://www.wiki.akosma.com/IPhone_URL_Schemes) of iOS URL schemes. `SSAppURLs` is a tiny `UIApplication` category that makes it easy to:
 
 * Check if the current device can open an app
 * Check if the current device has certain capabilities (e.g. Facetime)
-* Open an app with a URL scheme and pass an argument
+* Open an app with a URL scheme and pass some arguments
 
 `SSAppURLs` powers various URL actions and open-in-browser behavior in my app [MUDRammer - A Modern MUD Client for iPhone and iPad](https://itunes.apple.com/us/app/mudrammer-a-modern-mud-client/id597157072?mt=8).
 
@@ -27,10 +27,10 @@ Check out `Example` for an app example.
 #import <UIApplication+SSAppURLs.h>
 
 // Does the current device have skype installed?
-BOOL deviceSupportsFacetime = [[UIApplication sharedApplication] canOpenApp:SSAppURLTypeSkype];
+BOOL deviceSupportsSkype = [[UIApplication sharedApplication] canOpenApp:SSAppURLTypeSkype];
 
 // If so, let's make a call!
-if( deviceSupportsFacetime )
+if( deviceSupportsSkype )
   [[UIApplication sharedApplication] openApp:SSAppURLTypeSkype 
                                    withValue:@"415-555-1212"];
   
