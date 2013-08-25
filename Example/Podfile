@@ -1,0 +1,7 @@
+platform :ios, '6.0'
+
+xcodeproj 'SSAppURLsExample'
+
+pod 'SSAppURLs', :path => "../"
+
+pod 'SSDataSources'

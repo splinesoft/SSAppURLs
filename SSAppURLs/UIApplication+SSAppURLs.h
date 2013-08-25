@@ -16,6 +16,10 @@ typedef NS_ENUM( NSUInteger, SSAppURLType ) {
     // Skype
     SSAppURLTypeSkype,
     
+    // Safari
+    SSAppURLTypeSafariHTTP,
+    SSAppURLTypeSafariHTTPS,
+    
     // Facetime
     SSAppURLTypeFacetime,
     

@@ -17,4 +17,6 @@ profile
 DerivedData
 .idea/
 Podfile.lock
+Example/Podfile.lock
+Example/Pods
 *.xcuserstate

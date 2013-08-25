@@ -20,7 +20,12 @@ pod 'SSAppURLs', :head # YOLO
 
 # Examples
 
+Check out `Example` for an app example.
+
+
 ```objc
+#import <UIApplication+SSAppURLs.h>
+
 // Does the current device have skype installed?
 BOOL deviceSupportsFacetime = [[UIApplication sharedApplication] canOpenApp:SSAppURLTypeSkype];
 

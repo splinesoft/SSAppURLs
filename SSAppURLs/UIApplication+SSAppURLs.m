@@ -21,6 +21,10 @@ static NSString * const kChromeHTTPSFormat =    @"googlechromes://%@";
 static NSString * const kOperaHTTPFormat =      @"ohttp://%@";
 static NSString * const kOperaHTTPSFormat =     @"ohttps://%@";
 
+// Safari fallback
+static NSString * const kSafariHTTPURLFormat =  @"http://%@";
+static NSString * const kSafariHTTPSURLFormat = @"https://%@";
+
 static inline NSString * SSURLFormatForAppType(SSAppURLType appType) {
     switch( appType ) {
         case SSAppURLTypeSkype:
@@ -47,6 +51,10 @@ static inline NSString * SSURLFormatForAppType(SSAppURLType appType) {
             return kOperaHTTPFormat;
         case SSAppURLTypeOperaHTTPS:
             return kOperaHTTPSFormat;
+        case SSAppURLTypeSafariHTTP:
+            return kSafariHTTPURLFormat;
+        case SSAppURLTypeSafariHTTPS:
+            return kSafariHTTPSURLFormat;
         default:
             break;
     }

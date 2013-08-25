@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SSAppURLs"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Quickly check for and open URLs using iOS app URL schemes."
   s.homepage     = "https://github.com/splinesoft/SSAppURLs"
   s.license      = { :type => 'MIT', :file => 'LICENSE'  }
