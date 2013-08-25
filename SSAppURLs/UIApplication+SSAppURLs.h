@@ -13,7 +13,10 @@
 
 // URL formats for shared apps.
 typedef NS_ENUM( NSUInteger, SSAppURLType ) {
+    // Skype
     SSAppURLTypeSkype,
+    
+    // Facetime
     SSAppURLTypeFacetime,
     
     // Google maps supports numerous custom arguments.

@@ -21,12 +21,12 @@ pod 'SSAppURLs', :head # YOLO
 # Examples
 
 ```objc
-// Does the current device support Facetime?
-BOOL deviceSupportsFacetime = [[UIApplication sharedApplication] canOpenApp:SSAppURLTypeFacetime];
+// Does the current device have skype installed?
+BOOL deviceSupportsFacetime = [[UIApplication sharedApplication] canOpenApp:SSAppURLTypeSkype];
 
 // If so, let's make a call!
 if( deviceSupportsFacetime )
-  [[UIApplication sharedApplication] openApp:SSAppURLTypeFacetime 
+  [[UIApplication sharedApplication] openApp:SSAppURLTypeSkype 
                                    withValue:@"415-555-1212"];
   
 // Does the current device have Chrome installed?
