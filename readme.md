@@ -1,5 +1,7 @@
 # SSAppURLs
 
+![](http://cocoapod-badges.herokuapp.com/v/SSAppURLs/badge.png) &nbsp; ![](http://cocoapod-badges.herokuapp.com/p/SSAppURLs/badge.png)
+
 Quickly check for and open URLs using iOS app URL schemes.
 
 There are [many public lists](http://www.wiki.akosma.com/IPhone_URL_Schemes) of iOS URL schemes. `SSAppURLs` is a tiny `UIApplication` category that makes it easy to:
