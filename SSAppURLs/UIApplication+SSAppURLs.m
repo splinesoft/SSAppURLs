@@ -8,59 +8,30 @@
 
 #import "UIApplication+SSAppURLs.h"
 
-static NSString * const kSkypeFormat =          @"skype://%@?call";
-static NSString * const kFacetimeFormat =       @"facetime://%@";
-static NSString * const kGoogleMapsFormat =     @"comgooglemaps://%@";
-static NSString * const kPhoneFormat =          @"tel:%@";
-static NSString * const kSMSFormat =            @"sms:%@";
-static NSString * const k1PasswordFormat =      @"onepassword://search/%@";
-static NSString * const k1PasswordHTTPFormat =  @"ophttp://%@";
-static NSString * const k1PasswordHTTPSFormat = @"ophttps://%@";
-static NSString * const kChromeHTTPFormat =     @"googlechrome://%@";
-static NSString * const kChromeHTTPSFormat =    @"googlechromes://%@";
-static NSString * const kOperaHTTPFormat =      @"ohttp://%@";
-static NSString * const kOperaHTTPSFormat =     @"ohttps://%@";
-
-// Safari fallback
-static NSString * const kSafariHTTPURLFormat =  @"http://%@";
-static NSString * const kSafariHTTPSURLFormat = @"https://%@";
-
-static inline NSString * SSURLFormatForAppType(SSAppURLType appType) {
-    switch( appType ) {
-        case SSAppURLTypeSkype:
-            return kSkypeFormat;
-        case SSAppURLTypeFacetime:
-            return kFacetimeFormat;
-        case SSAppURLTypeGoogleMaps:
-            return kGoogleMapsFormat;
-        case SSAppURLTypePhone:
-            return kPhoneFormat;
-        case SSAppURLTypeSMS:
-            return kSMSFormat;
-        case SSAppURLType1PasswordSearch:
-            return k1PasswordFormat;
-        case SSAppURLType1PasswordHTTPURL:
-            return k1PasswordHTTPFormat;
-        case SSAppURLType1PasswordHTTPSURL:
-            return k1PasswordHTTPSFormat;
-        case SSAppURLTypeChromeHTTP:
-            return kChromeHTTPFormat;
-        case SSAppURLTypeChromeHTTPS:
-            return kChromeHTTPSFormat;
-        case SSAppURLTypeOperaHTTP:
-            return kOperaHTTPFormat;
-        case SSAppURLTypeOperaHTTPS:
-            return kOperaHTTPSFormat;
-        case SSAppURLTypeSafariHTTP:
-            return kSafariHTTPURLFormat;
-        case SSAppURLTypeSafariHTTPS:
-            return kSafariHTTPSURLFormat;
-        default:
-            break;
-    }
+static inline NSString * SSURLFormatForAppType(SSAppURLType type) {
+    static NSDictionary *appTypeDict;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        appTypeDict = @{
+            @(SSAppURLTypeSkype)                : @"skype://%@?call",
+            @(SSAppURLTypeSMS)                  : @"sms:%@",
+            @(SSAppURLTypeSafariHTTPS)          : @"https://%@",
+            @(SSAppURLTypeSafariHTTP)           : @"http://%@",
+            @(SSAppURLTypePhone)                : @"tel:%@",
+            @(SSAppURLTypeOperaHTTP)            : @"ohttp://%@",
+            @(SSAppURLTypeOperaHTTPS)           : @"ohttps://%@",
+            @(SSAppURLTypeGoogleMaps)           : @"comgooglemaps://%@",
+            @(SSAppURLTypeFacetime)             : @"facetime://%@",
+            @(SSAppURLTypeChromeHTTP)           : @"googlechrome://%@",
+            @(SSAppURLTypeChromeHTTPS)          : @"googlechromes://%@",
+            @(SSAppURLType1PasswordSearch)      : @"onepassword://search/%@",
+            @(SSAppURLType1PasswordHTTPURL)     : @"ophttp://%@",
+            @(SSAppURLType1PasswordHTTPSURL)    : @"ophttps://%@",                        
+        };
+    });
     
-    return nil;
-}
+    return appTypeDict[@(type)];
+};
 
 static inline NSString * SSSanitizedURL(NSString *input) {
   if( [input length] == 0 )
