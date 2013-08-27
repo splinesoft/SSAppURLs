@@ -33,14 +33,14 @@ typedef NS_ENUM( NSUInteger, SSAppURLType ) {
     // SMS type determines if the device can send text messages.
     SSAppURLTypeSMS,
     
+    // Chrome
+    SSAppURLTypeChromeHTTP,
+    SSAppURLTypeChromeHTTPS,
+  
     // 1Password
     SSAppURLType1PasswordSearch,
     SSAppURLType1PasswordHTTPURL,
     SSAppURLType1PasswordHTTPSURL,
-    
-    // Chrome
-    SSAppURLTypeChromeHTTP,
-    SSAppURLTypeChromeHTTPS,
     
     // Opera Mini
     SSAppURLTypeOperaHTTP,
@@ -50,19 +50,24 @@ typedef NS_ENUM( NSUInteger, SSAppURLType ) {
 /**
  * Determines if the current device is capable of opening a URL in a given app.
  * This works for device capabilities (e.g. Facetime) as well as other installed apps (e.g. Skype)
+ *
+ * @return YES if the device can open this app type.
  */
 - (BOOL) canOpenAppType:(SSAppURLType)appType;
 
 /**
  * Determines if the device can open an app URL with an arbitrary scheme.
  * '://' is stripped, so pass in things like "telnet".
+ *
+ * @return YES if the device can open an app to handle this scheme.
  */
 - (BOOL) canOpenAppWithScheme:(NSString *)scheme;
 
 /**
  * Constructs a URL and opens it in another app.
  * See `canOpenAppType:` above.
- * Return YES if an application was successfully opened.
+ *
+ * @return YES if an application was successfully opened.
  */
 - (BOOL) openAppType:(SSAppURLType)appType
            withValue:(NSString *)value;
@@ -73,6 +78,8 @@ typedef NS_ENUM( NSUInteger, SSAppURLType ) {
  * with `canOpenAppWithScheme:`.
  * Sample scheme: telnet
  * Sample value: nanvaent.org:23
+ *
+ * @return YES if an application was successfully opened.
  */
 - (BOOL) openAppWithScheme:(NSString *)scheme
                  withValue:(NSString *)value;
