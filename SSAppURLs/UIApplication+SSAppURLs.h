@@ -26,6 +26,12 @@ typedef NS_ENUM( NSUInteger, SSAppURLType ) {
     // Google maps supports numerous custom arguments.
     // See https://developers.google.com/maps/documentation/ios/urlscheme
     SSAppURLTypeGoogleMaps,
+  
+    // Google Earth
+    SSAppURLTypeGoogleEarth,
+  
+    // Google Plus
+    SSAppURLTypeGooglePlus,
     
     // Phone type can be used to determine if the device can make phone calls.
     SSAppURLTypePhone,
@@ -45,6 +51,19 @@ typedef NS_ENUM( NSUInteger, SSAppURLType ) {
     // Opera Mini
     SSAppURLTypeOperaHTTP,
     SSAppURLTypeOperaHTTPS,
+  
+    // Facebook
+    SSAppURLTypeFacebook,
+  
+    // Twitter
+    SSAppURLTypeTwitter,
+  
+    // Instagram
+    // See http://instagram.com/developer/iphone-hooks/#
+    SSAppURLTypeInstagram,
+  
+    // IMDB
+    SSAppURLTypeIMDB,
 };
 
 /**

@@ -26,7 +26,13 @@ static inline NSString * SSURLFormatForAppType(SSAppURLType type) {
             @(SSAppURLTypeChromeHTTPS)          : @"googlechromes://%@",
             @(SSAppURLType1PasswordSearch)      : @"onepassword://search/%@",
             @(SSAppURLType1PasswordHTTPURL)     : @"ophttp://%@",
-            @(SSAppURLType1PasswordHTTPSURL)    : @"ophttps://%@",                        
+            @(SSAppURLType1PasswordHTTPSURL)    : @"ophttps://%@",         
+            @(SSAppURLTypeFacebook)             : @"fb://%@",
+            @(SSAppURLTypeTwitter)              : @"twitter://%@",
+            @(SSAppURLTypeInstagram)            : @"instagram://%@",
+            @(SSAppURLTypeGoogleEarth)          : @"comgoogleearth://%@",
+            @(SSAppURLTypeIMDB)                 : @"imdb://%@",
+            @(SSAppURLTypeGooglePlus)           : @"gplus://%@",
         };
     });
     
