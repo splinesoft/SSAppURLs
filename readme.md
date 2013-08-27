@@ -29,7 +29,8 @@ Check out `Example` for an app example.
 #import <UIApplication+SSAppURLs.h>
 
 // Does the current device have skype installed?
-BOOL deviceSupportsSkype = [[UIApplication sharedApplication] canOpenAppType:SSAppURLTypeSkype];
+BOOL deviceSupportsSkype = [[UIApplication sharedApplication] 
+                             canOpenAppType:SSAppURLTypeSkype];
 
 // If so, let's make a call!
 if( deviceSupportsSkype )
@@ -37,7 +38,8 @@ if( deviceSupportsSkype )
                                        withValue:@"415-555-1212"];
   
 // Does the current device have Chrome installed?
-BOOL deviceHasChrome = [[UIApplication sharedApplication] canOpenAppType:SSAppURLTypeChromeHTTP];
+BOOL deviceHasChrome = [[UIApplication sharedApplication] 
+                        canOpenAppType:SSAppURLTypeChromeHTTP];
 
 // If so, open a website in chrome!
 if( deviceHasChrome )
@@ -45,11 +47,13 @@ if( deviceHasChrome )
 	                                     withValue:@"http://www.splinesoft.net"];
 	                                     
 // Check for an arbitrary scheme type
-BOOL deviceHasTelnetApp = [[UIApplication sharedApplication] canOpenAppWithScheme:@"telnet"];
+BOOL deviceHasTelnetApp = [[UIApplication sharedApplication] 
+                           canOpenAppWithScheme:@"telnet"];
 
 // Let's play NANVAENT!
 if( deviceHasTelnetApp )
-	[[UIApplication sharedApplication] openAppWithScheme:@"telnet" withValue:@"nanvaent.org:23"];
+	[[UIApplication sharedApplication] openAppWithScheme:@"telnet"
+	                                           withValue:@"nanvaent.org:23"];
 ```
 
 # Thanks!
