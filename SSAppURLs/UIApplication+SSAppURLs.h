@@ -13,15 +13,21 @@
 
 // URL formats for shared apps.
 typedef NS_ENUM( NSUInteger, SSAppURLType ) {
+    // Phone type can be used to determine if the device can make phone calls.
+    SSAppURLTypePhone,
+  
+    // SMS type determines if the device can send text messages.
+    SSAppURLTypeSMS,
+  
+    // Facetime
+    SSAppURLTypeFacetime,
+  
     // Skype
     SSAppURLTypeSkype,
     
     // Safari fallback - plain HTTP and HTTPS
     SSAppURLTypeSafariHTTP,
     SSAppURLTypeSafariHTTPS,
-    
-    // Facetime
-    SSAppURLTypeFacetime,
     
     // Google maps supports numerous custom arguments.
     // See https://developers.google.com/maps/documentation/ios/urlscheme
@@ -33,20 +39,14 @@ typedef NS_ENUM( NSUInteger, SSAppURLType ) {
     // Google Plus
     SSAppURLTypeGooglePlus,
     
-    // Phone type can be used to determine if the device can make phone calls.
-    SSAppURLTypePhone,
-    
-    // SMS type determines if the device can send text messages.
-    SSAppURLTypeSMS,
-    
     // Chrome
     SSAppURLTypeChromeHTTP,
     SSAppURLTypeChromeHTTPS,
   
     // 1Password
     SSAppURLType1PasswordSearch,
-    SSAppURLType1PasswordHTTPURL,
-    SSAppURLType1PasswordHTTPSURL,
+    SSAppURLType1PasswordHTTP,
+    SSAppURLType1PasswordHTTPS,
     
     // Opera Mini
     SSAppURLTypeOperaHTTP,

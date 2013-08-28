@@ -8,6 +8,8 @@
 
 #import "UIApplication+SSAppURLs.h"
 
+static NSString * const kSchemeSeparator = @"://";
+
 static inline NSString * SSURLFormatForAppType(SSAppURLType type) {
     static NSDictionary *appTypeDict;
     static dispatch_once_t onceToken;
@@ -25,8 +27,8 @@ static inline NSString * SSURLFormatForAppType(SSAppURLType type) {
             @(SSAppURLTypeChromeHTTP)           : @"googlechrome://%@",
             @(SSAppURLTypeChromeHTTPS)          : @"googlechromes://%@",
             @(SSAppURLType1PasswordSearch)      : @"onepassword://search/%@",
-            @(SSAppURLType1PasswordHTTPURL)     : @"ophttp://%@",
-            @(SSAppURLType1PasswordHTTPSURL)    : @"ophttps://%@",         
+            @(SSAppURLType1PasswordHTTP)        : @"ophttp://%@",
+            @(SSAppURLType1PasswordHTTPS)       : @"ophttps://%@",         
             @(SSAppURLTypeFacebook)             : @"fb://%@",
             @(SSAppURLTypeTwitter)              : @"twitter://%@",
             @(SSAppURLTypeInstagram)            : @"instagram://%@",
@@ -43,10 +45,10 @@ static inline NSString * SSSanitizedURL(NSString *input) {
   if( [input length] == 0 )
       return @"";
     
-    NSRange schemeRange = [input rangeOfString:@"://"];
+    NSRange schemeRange = [input rangeOfString:kSchemeSeparator];
     
     if( schemeRange.location != NSNotFound ) {
-        NSArray *bits = [input componentsSeparatedByString:@"://"];
+        NSArray *bits = [input componentsSeparatedByString:kSchemeSeparator];
         return [bits lastObject];
     }
     
@@ -57,10 +59,10 @@ static inline NSURL * NSURLWithSchemeAndValue(NSString *scheme, NSString *value)
     if( [scheme length] == 0 )
         return nil;
   
-    NSString *URLString = [SSSanitizedURL(scheme) stringByAppendingString:@"://"];
+    NSString *URLString = [SSSanitizedURL(scheme) stringByAppendingString:kSchemeSeparator];
   
     if( [value length] > 0 )
-        URLString = [URLString stringByAppendingString:value];
+        URLString = [URLString stringByAppendingString:SSSanitizedURL(value)];
     
     return [NSURL URLWithString:URLString];
 }
@@ -78,7 +80,7 @@ static inline NSURL * NSURLWithAppTypeAndValue(SSAppURLType type, NSString *valu
 @implementation UIApplication (SSAppURLs)
 
 - (BOOL) canOpenAppType:(SSAppURLType)appType {
-    NSURL *targetURL = NSURLWithAppTypeAndValue(appType, @"415-555-1212");
+    NSURL *targetURL = NSURLWithAppTypeAndValue(appType, nil);
     
     if( !targetURL )
         return NO;
