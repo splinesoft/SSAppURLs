@@ -1,6 +1,6 @@
 # SSAppURLs
 
-![](http://cocoapod-badges.herokuapp.com/v/SSAppURLs/badge.png) &nbsp; ![](http://cocoapod-badges.herokuapp.com/p/SSAppURLs/badge.png)
+![](http://cocoapod-badges.herokuapp.com/v/SSAppURLs/badge.png) &nbsp; ![](http://cocoapod-badges.herokuapp.com/p/SSAppURLs/badge.png) &nbsp; [![Build Status](https://travis-ci.org/splinesoft/SSAppURLs.png?branch=master)](https://travis-ci.org/splinesoft/SSAppURLs)
 
 Quickly check for and open URLs using [iOS app URL schemes](http://www.wiki.akosma.com/IPhone_URL_Schemes).
 
