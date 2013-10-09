@@ -42,8 +42,8 @@ static inline NSString * SSURLFormatForAppType(SSAppURLType type) {
 };
 
 static inline NSString * SSSanitizedURL(NSString *input) {
-  if( [input length] == 0 )
-      return @"";
+    if( [input length] == 0 )
+        return @"";
     
     NSRange schemeRange = [input rangeOfString:kSchemeSeparator];
     
