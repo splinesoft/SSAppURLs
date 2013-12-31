@@ -10,4 +10,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.source_files = 'SSAppURLs/*.{h,m}'
   s.frameworks   = 'UIKit'
+  s.social_media_url = 'https://twitter.com/jhersh'
 end
