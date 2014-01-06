@@ -2,6 +2,11 @@
 
 set -e
 
-cd Example
-pod install
-xctool -workspace SSAppURLSExample.xcworkspace -scheme SSAppURLsExample -sdk iphonesimulator build ONLY_ACTIVE_ARCH=NO
+xcodebuild \
+-workspace Example/SSAppURLsExample.xcworkspace \
+-scheme SSAppURLsExample \
+-sdk iphonesimulator \
+clean build \
+ONLY_ACTIVE_ARCH=NO \
+RUN_CLANG_STATIC_ANALYZER=YES \
+CLANG_STATIC_ANALYZER_MODE=deep | xcpretty -c
