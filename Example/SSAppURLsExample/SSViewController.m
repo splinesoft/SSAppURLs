@@ -70,7 +70,6 @@ static inline NSString * NSStringFromAppURLType(SSAppURLType type) {
 	
     dataSource = [[SSArrayDataSource alloc] initWithItems:
                   [appTypes objectsAtIndexes:availableAppIndexes]];
-    
     dataSource.cellConfigureBlock = ^(SSBaseTableCell *cell,
                                       NSNumber *appType,
                                       UITableView *tableView,
@@ -79,6 +78,11 @@ static inline NSString * NSStringFromAppURLType(SSAppURLType type) {
         NSString *type = NSStringFromAppURLType((SSAppURLType)[appType unsignedIntegerValue]);
         
         cell.textLabel.text = type;
+    };
+    dataSource.tableActionBlock = ^BOOL(SSCellActionType action,
+                                        UITableView *tableView,
+                                        NSIndexPath *indexPath) {
+        return NO;
     };
     dataSource.tableView = self.tableView;
     
