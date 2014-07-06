@@ -33,27 +33,30 @@ BOOL deviceSupportsSkype = [[UIApplication sharedApplication]
                              canOpenAppType:SSAppURLTypeSkype];
 
 // If so, let's make a call!
-if( deviceSupportsSkype )
-  [[UIApplication sharedApplication] openAppType:SSAppURLTypeSkype 
-                                       withValue:@"415-555-1212"];
+if (deviceSupportsSkype) {
+    [[UIApplication sharedApplication] openAppType:SSAppURLTypeSkype 
+                                         withValue:@"415-555-1212"];
+}
   
 // Does the current device have Chrome installed?
 BOOL deviceHasChrome = [[UIApplication sharedApplication] 
                         canOpenAppType:SSAppURLTypeChromeHTTP];
 
 // If so, open a website in chrome!
-if( deviceHasChrome )
+if (deviceHasChrome) {
 	[[UIApplication sharedApplication] openAppType:SSAppURLTypeChromeHTTP 
 	                                     withValue:@"http://www.splinesoft.net"];
+}
 	                                     
 // Check for an arbitrary scheme type
 BOOL deviceHasTelnetApp = [[UIApplication sharedApplication] 
                            canOpenAppWithScheme:@"telnet"];
 
 // Let's play NANVAENT!
-if( deviceHasTelnetApp )
+if (deviceHasTelnetApp) {
 	[[UIApplication sharedApplication] openAppWithScheme:@"telnet"
 	                                           withValue:@"nanvaent.org:23"];
+}
 ```
 
 # Thanks!

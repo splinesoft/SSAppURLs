@@ -42,27 +42,40 @@ static inline NSString * SSURLFormatForAppType(SSAppURLType type) {
 };
 
 static inline NSString * SSSanitizedURL(NSString *input) {
-    if( [input length] == 0 )
+    if ([input length] == 0) {
         return @"";
+    }
     
     NSRange schemeRange = [input rangeOfString:kSchemeSeparator];
     
-    if( schemeRange.location != NSNotFound ) {
-        NSArray *bits = [input componentsSeparatedByString:kSchemeSeparator];
-        return [bits lastObject];
+    if (schemeRange.location != NSNotFound) {
+        // This URL already has a scheme separator (://) and it falls at the end
+        if ([input hasSuffix:kSchemeSeparator]) {
+            return input;
+        }
+        
+        // URL begins with a scheme? No good.
+        if ([input hasPrefix:kSchemeSeparator]) {
+            return [input substringFromIndex:[kSchemeSeparator length]];
+        }
+        
+        // There is a scheme separator somewhere else. return it as-is
+        return input;
     }
     
-    return input;
+    return [input stringByAppendingString:kSchemeSeparator];
 };
 
 static inline NSURL * NSURLWithSchemeAndValue(NSString *scheme, NSString *value) {
-    if( [scheme length] == 0 )
+    if ([scheme length] == 0) {
         return nil;
+    }
   
-    NSString *URLString = [SSSanitizedURL(scheme) stringByAppendingString:kSchemeSeparator];
+    NSString *URLString = SSSanitizedURL(scheme);
   
-    if( [value length] > 0 )
+    if ([value length] > 0) {
         URLString = [URLString stringByAppendingString:SSSanitizedURL(value)];
+    }
     
     return [NSURL URLWithString:URLString];
 }
@@ -70,8 +83,9 @@ static inline NSURL * NSURLWithSchemeAndValue(NSString *scheme, NSString *value)
 static inline NSURL * NSURLWithAppTypeAndValue(SSAppURLType type, NSString *value) {
     NSString *format = SSURLFormatForAppType(type);
     
-    if( !format )
+    if (!format) {
         return nil;
+    }
     
     return [NSURL URLWithString:[NSString stringWithFormat:format,
                                  SSSanitizedURL(value)]];
@@ -82,8 +96,9 @@ static inline NSURL * NSURLWithAppTypeAndValue(SSAppURLType type, NSString *valu
 - (BOOL) canOpenAppType:(SSAppURLType)appType {
     NSURL *targetURL = NSURLWithAppTypeAndValue(appType, nil);
     
-    if( !targetURL )
+    if (!targetURL) {
         return NO;
+    }
     
     return [self canOpenURL:targetURL];
 }
@@ -91,8 +106,9 @@ static inline NSURL * NSURLWithAppTypeAndValue(SSAppURLType type, NSString *valu
 - (BOOL)canOpenAppWithScheme:(NSString *)scheme {    
     NSURL *targetURL = NSURLWithSchemeAndValue(scheme, nil);
     
-    if( !targetURL )
+    if (!targetURL) {
         return NO;
+    }
     
     return [self canOpenURL:targetURL];
 }
@@ -102,8 +118,9 @@ static inline NSURL * NSURLWithAppTypeAndValue(SSAppURLType type, NSString *valu
     
     NSURL *targetURL = NSURLWithAppTypeAndValue(appType, value);
     
-    if( !targetURL )
+    if (!targetURL) {
         return NO;
+    }
     
     return [self openURL:targetURL];
 }
@@ -113,8 +130,9 @@ static inline NSURL * NSURLWithAppTypeAndValue(SSAppURLType type, NSString *valu
     
     NSURL *targetURL = NSURLWithSchemeAndValue(scheme, value);
     
-    if( !targetURL )
+    if (!targetURL) {
         return NO;
+    }
     
     return [self openURL:targetURL];
 }

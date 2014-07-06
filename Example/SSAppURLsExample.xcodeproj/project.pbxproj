@@ -18,10 +18,27 @@
 		5E942B8B17CAA5B700D24A65 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E942B8A17CAA5B700D24A65 /* Default@2x.png */; };
 		5E942B8D17CAA5B700D24A65 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E942B8C17CAA5B700D24A65 /* Default-568h@2x.png */; };
 		5E942B9017CAA5B700D24A65 /* SSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E942B8F17CAA5B700D24A65 /* SSViewController.m */; };
+		5E98111E19625B3000195303 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E98111D19625B3000195303 /* XCTest.framework */; };
+		5E98111F19625B3000195303 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E942B7817CAA5B700D24A65 /* Foundation.framework */; };
+		5E98112019625B3000195303 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E942B7617CAA5B700D24A65 /* UIKit.framework */; };
+		5E98112619625B3000195303 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E98112419625B3000195303 /* InfoPlist.strings */; };
+		5E98112819625B3000195303 /* SSAppURLsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E98112719625B3000195303 /* SSAppURLsTests.m */; };
+		D194DBCB573847D7AF002105 /* libPods-SSAppURLsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4B8374C3FE74D60A054D022 /* libPods-SSAppURLsTests.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5E98112A19625B3000195303 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E942B6B17CAA5B700D24A65 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5E942B7217CAA5B700D24A65;
+			remoteInfo = SSAppURLsExample;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1CFBE2487C6B43FD864117C7 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		2FEB18A9D55A4EB28C8C9590 /* Pods-SSAppURLsTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSAppURLsTests.xcconfig"; path = "Pods/Pods-SSAppURLsTests.xcconfig"; sourceTree = "<group>"; };
 		5E942B7317CAA5B700D24A65 /* SSAppURLsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSAppURLsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E942B7617CAA5B700D24A65 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5E942B7817CAA5B700D24A65 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -37,7 +54,14 @@
 		5E942B8C17CAA5B700D24A65 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		5E942B8E17CAA5B700D24A65 /* SSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSViewController.h; sourceTree = "<group>"; };
 		5E942B8F17CAA5B700D24A65 /* SSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSViewController.m; sourceTree = "<group>"; };
+		5E98111C19625B3000195303 /* SSAppURLsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SSAppURLsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E98111D19625B3000195303 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		5E98112319625B3000195303 /* SSAppURLsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SSAppURLsTests-Info.plist"; sourceTree = "<group>"; };
+		5E98112519625B3000195303 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5E98112719625B3000195303 /* SSAppURLsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSAppURLsTests.m; sourceTree = "<group>"; };
+		5E98112919625B3000195303 /* SSAppURLsTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SSAppURLsTests-Prefix.pch"; sourceTree = "<group>"; };
 		E61A507CFD9840139C96A247 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4B8374C3FE74D60A054D022 /* libPods-SSAppURLsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SSAppURLsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +76,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5E98111919625B3000195303 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E98111E19625B3000195303 /* XCTest.framework in Frameworks */,
+				5E98112019625B3000195303 /* UIKit.framework in Frameworks */,
+				5E98111F19625B3000195303 /* Foundation.framework in Frameworks */,
+				D194DBCB573847D7AF002105 /* libPods-SSAppURLsTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -59,9 +94,11 @@
 			isa = PBXGroup;
 			children = (
 				5E942B7C17CAA5B700D24A65 /* SSAppURLsExample */,
+				5E98112119625B3000195303 /* SSAppURLsTests */,
 				5E942B7517CAA5B700D24A65 /* Frameworks */,
 				5E942B7417CAA5B700D24A65 /* Products */,
 				1CFBE2487C6B43FD864117C7 /* Pods.xcconfig */,
+				2FEB18A9D55A4EB28C8C9590 /* Pods-SSAppURLsTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				5E942B7317CAA5B700D24A65 /* SSAppURLsExample.app */,
+				5E98111C19625B3000195303 /* SSAppURLsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -80,6 +118,8 @@
 				5E942B7817CAA5B700D24A65 /* Foundation.framework */,
 				5E942B7A17CAA5B700D24A65 /* CoreGraphics.framework */,
 				E61A507CFD9840139C96A247 /* libPods.a */,
+				5E98111D19625B3000195303 /* XCTest.framework */,
+				F4B8374C3FE74D60A054D022 /* libPods-SSAppURLsTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -110,6 +150,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5E98112119625B3000195303 /* SSAppURLsTests */ = {
+			isa = PBXGroup;
+			children = (
+				5E98112719625B3000195303 /* SSAppURLsTests.m */,
+				5E98112219625B3000195303 /* Supporting Files */,
+			);
+			path = SSAppURLsTests;
+			sourceTree = "<group>";
+		};
+		5E98112219625B3000195303 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5E98112319625B3000195303 /* SSAppURLsTests-Info.plist */,
+				5E98112419625B3000195303 /* InfoPlist.strings */,
+				5E98112919625B3000195303 /* SSAppURLsTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,6 +191,26 @@
 			productReference = 5E942B7317CAA5B700D24A65 /* SSAppURLsExample.app */;
 			productType = "com.apple.product-type.application";
 		};
+		5E98111B19625B3000195303 /* SSAppURLsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E98112E19625B3000195303 /* Build configuration list for PBXNativeTarget "SSAppURLsTests" */;
+			buildPhases = (
+				8AE7214F6BA64CADBDAFF56D /* Check Pods Manifest.lock */,
+				5E98111819625B3000195303 /* Sources */,
+				5E98111919625B3000195303 /* Frameworks */,
+				5E98111A19625B3000195303 /* Resources */,
+				1BDCB16A69404476880EBD42 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5E98112B19625B3000195303 /* PBXTargetDependency */,
+			);
+			name = SSAppURLsTests;
+			productName = SSAppURLsTests;
+			productReference = 5E98111C19625B3000195303 /* SSAppURLsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -141,6 +220,11 @@
 				CLASSPREFIX = SS;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = Splinesoft;
+				TargetAttributes = {
+					5E98111B19625B3000195303 = {
+						TestTargetID = 5E942B7217CAA5B700D24A65;
+					};
+				};
 			};
 			buildConfigurationList = 5E942B6E17CAA5B700D24A65 /* Build configuration list for PBXProject "SSAppURLsExample" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -155,6 +239,7 @@
 			projectRoot = "";
 			targets = (
 				5E942B7217CAA5B700D24A65 /* SSAppURLsExample */,
+				5E98111B19625B3000195303 /* SSAppURLsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -168,6 +253,14 @@
 				5E942B8917CAA5B700D24A65 /* Default.png in Resources */,
 				5E942B8B17CAA5B700D24A65 /* Default@2x.png in Resources */,
 				5E942B8D17CAA5B700D24A65 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E98111A19625B3000195303 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E98112619625B3000195303 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +280,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1BDCB16A69404476880EBD42 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-SSAppURLsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8AE7214F6BA64CADBDAFF56D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		FC18A5883D7547BA98E5609D /* Check Pods Manifest.lock */ = {
@@ -217,13 +340,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5E98111819625B3000195303 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E98112819625B3000195303 /* SSAppURLsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5E98112B19625B3000195303 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5E942B7217CAA5B700D24A65 /* SSAppURLsExample */;
+			targetProxy = 5E98112A19625B3000195303 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5E942B7F17CAA5B700D24A65 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				5E942B8017CAA5B700D24A65 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5E98112419625B3000195303 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E98112519625B3000195303 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -293,10 +440,43 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1CFBE2487C6B43FD864117C7 /* Pods.xcconfig */;
 			buildSettings = {
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
+				CLANG_WARN_CXX0X_EXTENSIONS = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = YES;
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_RECEIVER_WEAK = YES;
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN__EXIT_TIME_DESTRUCTORS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SSAppURLsExample/SSAppURLsExample-Prefix.pch";
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
 				INFOPLIST_FILE = "SSAppURLsExample/SSAppURLsExample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -305,11 +485,107 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1CFBE2487C6B43FD864117C7 /* Pods.xcconfig */;
 			buildSettings = {
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
+				CLANG_WARN_CXX0X_EXTENSIONS = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = YES;
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_RECEIVER_WEAK = YES;
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN__EXIT_TIME_DESTRUCTORS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SSAppURLsExample/SSAppURLsExample-Prefix.pch";
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
 				INFOPLIST_FILE = "SSAppURLsExample/SSAppURLsExample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		5E98112C19625B3000195303 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FEB18A9D55A4EB28C8C9590 /* Pods-SSAppURLsTests.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SSAppURLsExample.app/SSAppURLsExample";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SSAppURLsTests/SSAppURLsTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "SSAppURLsTests/SSAppURLsTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		5E98112D19625B3000195303 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FEB18A9D55A4EB28C8C9590 /* Pods-SSAppURLsTests.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SSAppURLsExample.app/SSAppURLsExample";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SSAppURLsTests/SSAppURLsTests-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "SSAppURLsTests/SSAppURLsTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -330,6 +606,15 @@
 			buildConfigurations = (
 				5E942B9A17CAA5B700D24A65 /* Debug */,
 				5E942B9B17CAA5B700D24A65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5E98112E19625B3000195303 /* Build configuration list for PBXNativeTarget "SSAppURLsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E98112C19625B3000195303 /* Debug */,
+				5E98112D19625B3000195303 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -4,4 +4,8 @@ xcodeproj 'SSAppURLsExample'
 
 pod 'SSAppURLs', :path => "../"
 
-pod 'SSDataSources'
+pod 'SSDataSources', '~> 0.7.0'
+
+target :SSAppURLsTests, :exclusive => true do
+    pod 'OCMock'
+end
