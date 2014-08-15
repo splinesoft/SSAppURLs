@@ -7,6 +7,5 @@ xcuserdata
 profile
 DerivedData
 
-Example/Podfile.lock
 Example/Pods
 *.xcuserstate
