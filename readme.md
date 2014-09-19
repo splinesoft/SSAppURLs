@@ -14,7 +14,7 @@ Quickly check for and open URLs using [iOS app URL schemes](http://www.wiki.akos
 
 # Install
 
-Install with [Cocoapods](http://cocoapods.org/). Add to your Podfile:
+Install with [CocoaPods](http://cocoapods.org/). Add to your `Podfile`:
 
 ```
 pod 'SSAppURLs', :head # YOLO
