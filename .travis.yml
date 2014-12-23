@@ -7,4 +7,3 @@ script:
     - export LC_CTYPE=en_US.UTF-8
     - export LANG=en_US.UTF-8
     - set -o pipefail && xcodebuild -workspace Example/SSAppURLsExample.xcworkspace -scheme SSAppURLsExample -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 6" clean test | xcpretty -c
- 
