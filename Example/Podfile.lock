@@ -1,20 +1,20 @@
 PODS:
-  - OCMock (3.0.2)
+  - OCMock (3.1.1)
   - SSAppURLs (0.1.0)
-  - SSDataSources (0.7.1)
+  - SSDataSources (0.8.0)
 
 DEPENDENCIES:
   - OCMock
   - SSAppURLs (from `../`)
-  - SSDataSources (~> 0.7.0)
+  - SSDataSources
 
 EXTERNAL SOURCES:
   SSAppURLs:
     :path: ../
 
 SPEC CHECKSUMS:
-  OCMock: b9836ab89d8d5e66cbe6333f93857037c310ee62
+  OCMock: f6cb8c162ab9d5620dddf411282c7b2c0ee78854
   SSAppURLs: b4035e58c3ccaae37375860860abf9b591bfbf76
-  SSDataSources: a92a102491a3f6ab45962577a7fe3784e7b20c2e
+  SSDataSources: 4a9f4ecbc390e107c98002a91181e671429bc7b4
 
-COCOAPODS: 0.33.1
+COCOAPODS: 0.35.0
