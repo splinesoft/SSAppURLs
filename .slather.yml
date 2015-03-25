@@ -1,0 +1,5 @@
+ci_service: circleci
+coverage_service: coveralls
+xcodeproj: Example/SSAppURLsExample.xcodeproj
+source_directory: SSAppURLs
+ci_access_token: aXP8xFx5onCOMWpLR9auNZT2dUT8quhIq
