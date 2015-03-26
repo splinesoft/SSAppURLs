@@ -10,7 +10,7 @@
 
 static NSString * const kSchemeSeparator = @"://";
 
-static inline NSString * SSURLFormatForAppType(SSAppURLType type) {
+CG_INLINE NSString * SSURLFormatForAppType(SSAppURLType type) {
     static NSDictionary *appTypeDict;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -41,7 +41,7 @@ static inline NSString * SSURLFormatForAppType(SSAppURLType type) {
     return appTypeDict[@(type)];
 };
 
-static inline NSString * SSSanitizedURL(NSString *input) {
+CG_INLINE NSString * SSSanitizedURL(NSString *input) {
     if ([input length] == 0) {
         return @"";
     }
@@ -66,7 +66,7 @@ static inline NSString * SSSanitizedURL(NSString *input) {
     return [input stringByAppendingString:kSchemeSeparator];
 };
 
-static inline NSURL * NSURLWithSchemeAndValue(NSString *scheme, NSString *value) {
+CG_INLINE NSURL * NSURLWithSchemeAndValue(NSString *scheme, NSString *value) {
     if ([scheme length] == 0) {
         return nil;
     }
@@ -80,7 +80,7 @@ static inline NSURL * NSURLWithSchemeAndValue(NSString *scheme, NSString *value)
     return [NSURL URLWithString:URLString];
 }
 
-static inline NSURL * NSURLWithAppTypeAndValue(SSAppURLType type, NSString *value) {
+CG_INLINE NSURL * NSURLWithAppTypeAndValue(SSAppURLType type, NSString *value) {
     NSString *format = SSURLFormatForAppType(type);
     
     if (!format) {

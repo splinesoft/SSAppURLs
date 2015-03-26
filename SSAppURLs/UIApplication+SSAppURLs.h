@@ -12,7 +12,7 @@
 @interface UIApplication (SSAppURLs)
 
 // URL formats for shared apps.
-typedef NS_ENUM( NSUInteger, SSAppURLType ) {
+typedef NS_ENUM (NSUInteger, SSAppURLType) {
     // Phone type can be used to determine if the device can make phone calls.
     SSAppURLTypePhone,
   
