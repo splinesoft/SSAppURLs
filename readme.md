@@ -1,6 +1,6 @@
 # SSAppURLs
 
-[![Circle CI](https://circleci.com/gh/splinesoft/SSAppURLs.svg?style=svg&circle-token=067c04e92629d230aa95a540ba5e9cd53f718ec6)](https://circleci.com/gh/splinesoft/SSAppURLs) [![Coverage Status](https://coveralls.io/repos/splinesoft/SSAppURLs/badge.svg)](https://coveralls.io/r/splinesoft/SSAppURLs)
+[![Circle CI](https://circleci.com/gh/splinesoft/SSAppURLs.svg?style=svg&circle-token=067c04e92629d230aa95a540ba5e9cd53f718ec6)](https://circleci.com/gh/splinesoft/SSAppURLs) [![Coverage Status](http://codecov.io/github/splinesoft/SSAppURLs/coverage.svg?branch=master)](http://codecov.io/github/splinesoft/SSAppURLs?branch=master)
 
 Quickly check for and open URLs using [iOS app URL schemes](http://www.wiki.akosma.com/IPhone_URL_Schemes).
 
