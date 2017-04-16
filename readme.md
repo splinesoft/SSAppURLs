@@ -26,7 +26,7 @@ Check out `Example` for an app example.
 
 
 ```objc
-#import <UIApplication+SSAppURLs.h>
+# import <UIApplication+SSAppURLs.h>
 
 // Does the current device have skype installed?
 BOOL deviceSupportsSkype = [[UIApplication sharedApplication] 
